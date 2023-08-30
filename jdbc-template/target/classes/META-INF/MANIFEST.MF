@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Built-By: akash
-Build-Jdk: 11.0.3
+Build-Jdk: 17.0.8
 Implementation-Title: jdbctemplate
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: guru.springframework

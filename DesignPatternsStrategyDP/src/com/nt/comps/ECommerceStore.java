@@ -2,10 +2,10 @@ package com.nt.comps;
 
 import java.util.Arrays;
 import java.util.Random;
-
+		//implementing rule number 3 (code must be open for extension and must be closed for modification)
 public final class ECommerceStore {
 
-	//HAS-A property
+	//HAS-A property	implementing rule number 2 code in interface and abstract classes never code in implementation or concrete classes
 	private Courier courier;
 	
 	public ECommerceStore() {

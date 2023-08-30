@@ -1,7 +1,5 @@
 package com.singleton.singleton;
 
-
-
 import com.singleton.commons.CommonsUtils;
 
 //Singleton java class with minimum standards
@@ -95,6 +93,7 @@ public class Singleton extends CommonsUtils {
 //		
 //		return INSTANCE;
 //	}
+			
 			
 	@Override			// Best approach
 	public Object clone() throws CloneNotSupportedException {

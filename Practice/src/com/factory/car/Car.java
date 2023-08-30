@@ -1,11 +1,9 @@
 package com.factory.car;
 
-public abstract class Car {
+public interface Car {
 
-	private int engineId;
-	private String regId;
+	public void assemble();
+	public void roadTest();
+	public void drive();
 	
-	public abstract void assemble();
-	public abstract void roadTest();
-	public abstract void drive();
 }

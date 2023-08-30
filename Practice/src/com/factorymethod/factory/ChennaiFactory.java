@@ -1,47 +1,41 @@
 package com.factorymethod.factory;
 
 import com.factorymethod.bike.BajajBike;
-import com.factorymethod.bike.DiscoverBike;
-import com.factorymethod.bike.PlatinaBike;
-import com.factorymethod.bike.PulserBike;
+import com.factorymethod.bike.Discover;
+import com.factorymethod.bike.Platina;
+import com.factorymethod.bike.Pulser;
+import com.factorymethod.superfactory.BajajFactory;
 
-public class ChennaiFactory extends BajajBikeFactory {
+public class ChennaiFactory extends BajajFactory {
 
-	@Override
-	public void assemble() {
-		System.out.println("ChennaiFactory.assemble()");
-		
+	public void painting() {
+		System.out.println("ChannaiFactory.painting()");
 	}
 
-	@Override
-	public void paint() {
-		System.out.println("ChennaiFactory.paint()");
-		
+	public void assembling() {
+		System.out.println("ChannaiFactory.assembling()");
 	}
 
-	@Override
 	public void engineTest() {
-		System.out.println("ChennaiFactory.engineTest()");
+		System.out.println("ChannaiFactory.engineTest()");
 		
 	}
 
-	@Override
 	public void roadTest() {
-		System.out.println("ChennaiFactory.roadTest()");
-		
+		System.out.println("ChannaiFactory.roadTest()");
 	}
 
-	@Override
-	public BajajBike creatBike(String type) {
+	public BajajBike createBike(String type) {
 		BajajBike bike = null;
-		if(type.equalsIgnoreCase("pulser"))
-			bike = new PulserBike();
-		else if(type.equalsIgnoreCase("platina"))
-			bike = new PlatinaBike();
-		else if(type.equalsIgnoreCase("discover"))
-			bike = new DiscoverBike();
-		else
-			throw new IllegalArgumentException("Invalid bike type");
+		
+		if(type.equalsIgnoreCase("pulser")) {
+			bike = new Pulser();
+		}else if(type.equalsIgnoreCase("discover")) {
+			bike = new Discover();
+		}else if(type.equalsIgnoreCase("platina")) {
+			bike = new Platina();
+		}
+		
 		return bike;
 	}
 

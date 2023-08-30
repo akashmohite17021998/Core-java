@@ -1,27 +1,22 @@
 package com.OOPs;
 
-class Ex03 {
-	int x = 10;
+import java.util.Enumeration;
+import java.util.Vector;
 
-	public void tarFile() {
-		System.out.println();
-
-	}
-
-}
-
-class B extends Ex03 {
-	private int y = 30;
-
+public class B {
+	
 	public static void main(String[] args) {
-		B b = new B();
-
-		System.out.println(b.y + b.getX());
-
+		Vector<String>vector=new Vector<String>();
+		vector.add("P");
+		vector.add("Q");
+		vector.add("R");
+		vector.add("S");
+		Enumeration en=vector.elements();
+		while(en.hasMoreElements()) {
+			
+			String s = (String) en.nextElement();
+		System.out.println(s);
+		}
 	}
-
-	public int getX() {
-		return super.x;
-	}
-
 }
+
